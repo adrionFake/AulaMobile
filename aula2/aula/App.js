@@ -9,7 +9,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text>Quero motor da Yanagi ;-;</Text>
+      <Text>Meu senhor, Me ajuda </Text>
       
     </View>
   );
