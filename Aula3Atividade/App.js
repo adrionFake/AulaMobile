@@ -5,7 +5,15 @@ export default function App() {
     <SafeAreaView style={estilos.tela}>
     
       <View>
-      <Text style={estilos.textowhite}>Me empresta 3 milhões de lules por 30 anos ?</Text>
+
+      <View style={estilos.avatar}>
+      
+      </View>
+
+      </View>
+      
+      <View>
+      <Text style={estilos.textowhite}>A DLC de Elden aumento, Alguem me Presenteia</Text>
       </View>
        
        <Text style={estilos.ladoesquerdo2}>Menu:</Text>
@@ -21,7 +29,11 @@ export default function App() {
        <View style={estilos.ladoesquerdo}>
        <Text>AVISOS</Text>
        </View>
-        
+      <ScrollView>
+
+
+
+      </ScrollView>
 
 
        </View>
@@ -40,7 +52,7 @@ tela:{
   flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'black',
+        backgroundColor: 'white',
 },
 CaixaRedonda:{
 width: 60,

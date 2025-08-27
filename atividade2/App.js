@@ -9,13 +9,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text>Meu senhor, Me ajuda </Text>
-      <Button
-       
-      title="Não Faço nada"
-      color="#841584"
-      accessibilityLabel="Learn more about this purple button"
-/>
+      <Text>Universal React with Expo</Text>
     </View>
   );
 }
