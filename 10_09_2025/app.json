@@ -1,0 +1,8 @@
+{
+  "name": "10_09_2025",
+  "slug": "10_09_2025",
+  "plugins": [
+    "expo-router"
+  ],
+  "scheme": "telas"
+}
