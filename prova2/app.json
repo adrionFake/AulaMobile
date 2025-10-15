@@ -1,0 +1,9 @@
+{
+  "name": "prova2",
+  "slug": "prova2",
+   "scheme": "prova2",
+  "plugins": [
+    "expo-sqlite",
+    "expo-router"
+  ]
+}
