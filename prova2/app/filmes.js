@@ -140,7 +140,7 @@ export default function Filme() {
           </View>
         )}
       />
-     <View style={estilos.rodape}>
+     <View>
         <Button title="Inicio" onPress={() => router.back()} />
       </View>
     </SafeAreaView>
