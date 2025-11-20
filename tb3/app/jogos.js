@@ -39,8 +39,6 @@ export default function Jogos() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [jogos, setJogos] = useState([]);
-
-  // estados para edição
   const [editando, setEditando] = useState(false);
   const [idEditando, setIdEditando] = useState(null);
 
@@ -137,48 +135,36 @@ export default function Jogos() {
       />
 
       <View style={estilos.linha}>
-        <Button title="Pesquisar" onPress={carregarJogos} />
-
-        <Button
+     
+     
+     <Button title="Pesquisar" onPress={carregarJogos} />
+     
+     {/* trocar para touchableOpacity <----------------------------------------------------------------------------*/}
+     <Button
           title={editando ? "Atualizar" : "Salvar"}
           onPress={editando ? atualizar : salvar}
           disabled={!title.trim() || !slug.trim() || !price.trim()}
-          color={!title.trim() || !slug.trim() || !price.trim() ? "#9e9e9e" : "#4aa3ff"}
+          color={!title.trim() || !slug.trim() || !price.trim() ? "#0099ffff" : "#4aa3ff"}
         />
       </View>
 
-      {editando && (
-        <Button
-          title="Cancelar edição"
-          color="#6b7280"
-          onPress={() => {
-            setEditando(false);
-            setIdEditando(null);
-            setTitle("");
-            setSlug("");
-            setDescription("");
-            setPrice("");
-          }}
-        />
-      )}
+  
+ <FlatList
+ data={jogos}
+ renderItem={({ item }) => (
+ <View style={estilos.card}>
+ <View style={estilos.cardTopo}>
+ <Text style={estilos.cardTitulo}>{item.title}</Text>
+ <View style={estilos.acoes}>
+ <Button title="E" color="#3b82f6" onPress={() => editar(item)} />
+ <Button title="X" color="#dc2626" onPress={() => excluirJogos(item.id)} />
+ </View>
+ </View>
 
-      <FlatList
-        data={jogos}
-        renderItem={({ item }) => (
-          <View style={estilos.card}>
-            <View style={estilos.cardTopo}>
-              <Text style={estilos.cardTitulo}>{item.title}</Text>
-
-              <View style={estilos.acoes}>
-                <Button title="E" color="#3b82f6" onPress={() => editar(item)} />
-                <Button title="X" color="#dc2626" onPress={() => excluirJogos(item.id)} />
-              </View>
-            </View>
-
-            <Text>{item.slug}</Text>
-            <Text>{item.description}</Text>
-            <Text style={estilos.preco}>R$ {item.price}</Text>
-          </View>
+ <Text>{item.slug}</Text>
+ <Text>{item.description}</Text>
+ <Text style={estilos.preco}>{item.price}</Text>  
+  </View>
         )}
       />
 
