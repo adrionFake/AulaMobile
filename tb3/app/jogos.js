@@ -139,7 +139,7 @@ export default function Jogos() {
      
      <Button title="Pesquisar" onPress={carregarJogos} />
      
-     {/* trocar para touchableOpacity <----------------------------------------------------------------------------*/}
+  
      <Button
           title={editando ? "Atualizar" : "Salvar"}
           onPress={editando ? atualizar : salvar}
@@ -162,8 +162,8 @@ export default function Jogos() {
  </View>
 
  <Text>{item.slug}</Text>
- <Text>{item.description}</Text>
- <Text style={estilos.preco}>{item.price}</Text>  
+ <Text>Descrição:{item.description}</Text>
+ <Text style={estilos.preco}>Preço:{item.price}</Text>  
   </View>
         )}
       />

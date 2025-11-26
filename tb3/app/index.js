@@ -7,8 +7,9 @@ export default function Home() {
 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center", gap: 12 }}>
-      <Text style={{ fontSize: 18 }}>Home (Hooks)</Text>
-      <Text>Contagem: {count}</Text>
+      <Text style={{ fontSize: 18 }}>いらっしゃいませ :D</Text>
+      <Text>( Irasshaimase )</Text>
+      <Text>Contagem de Bitcoins doados pelo Sor: {count}</Text>
       <Button title="Somar +1" onPress={() => setCount((c) => c + 1)} />
 
       <Link href="/jogos" asChild>
